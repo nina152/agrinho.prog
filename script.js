@@ -6,12 +6,11 @@ function showInfo(card) {
     alert(card.getAttribute('data-info'));
   }
   
-  // Adiciona interatividade aos cartões (click e keydown)
   document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.card');
   
     cards.forEach(card => {
-      card.setAttribute('tabindex', '0'); // Permite focar pelo teclado
+      card.setAttribute('tabindex', '0');
   
       card.addEventListener('click', () => showInfo(card));
   
@@ -23,7 +22,6 @@ function showInfo(card) {
       });
     });
   
-    // Lógica do Quiz
     const buttons = document.querySelectorAll('#quiz button');
     const feedback = document.getElementById('quizFeedback');
     const correctAnswer = "Sensores Inteligentes";
